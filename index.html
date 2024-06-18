@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="barradenav">
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">Sobre Nós</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contato</a></li>
+        </ul>
+
+    </div>
+    <div class="content">
+        <h1>Najú Pratas</h1>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h2>Bem-vindo ao nosso site!</h2>
+            <p>Este é um site dedicado a venda de pratas 925.</p>
+            <div class="image-gallery">
+                <img src="425699274dcdd94d84d4813bb0d93d9b.jpg" alt="imagem1">
+                <img src="atacado-de-pratas-925-com-20-correntes-20-pingentes-D_NQ_NP_727390-MLB30537339812_052019-F.jpg" alt="Imagem 2">
+                <img src="par-de-aliancas-prata-925-lisa-reta-confort-4mm-gravaco-D_NQ_NP_819662-MLB27042036916_032018-F.jpg" alt="Imagem 3">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa voltada a pratas 925 de boa qualidade. </p>
+        </section>
+
+
+        <section id="contact">
+            <h2>Número para contato</h2>
+            <p>(84)99626-5950</p>
+        </section>
+    </div>
+    <script>
+        // Função para mostrar a seção correspondente e esconder as outras
+        function showSection(sectionId) {
+            // Esconde todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Mostra a seção correspondente
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        // Mostra a seção "Home" por padrão quando a página carrega
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
